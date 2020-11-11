@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  cache_nginx:
+    build: ./docker/cache_nginx
+    volumes:
+      - ./docker/cache_nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - origin_nginx
+    ports:
+      - 10088:80
+  origin_nginx:
+    image: nginx:latest
+    volumes:
+      - ./docker/origin_nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./src:/var/www/html

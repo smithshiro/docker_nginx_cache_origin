@@ -1,0 +1,48 @@
+body {
+  font-size: 1rem;
+  color: #fafafa;
+  line-height: 1.2rem;
+  height: 100vh;
+  background: url('../image/sample.jpg');
+  background-size: cover;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+header nav {
+  margin:: 50px;
+}
+header nav li {
+  margin: 20px;
+}
+main {
+  height: 100vh;
+  position: relative;
+  background: #3131314a;
+}
+main .content {
+  position: absolute;
+  width: 60%;
+  top: 45vh;
+  left: 20%;
+  right: 20%;
+}
+.content h1 {
+  font-size: 3rem;
+  margin: 30px;
+  text-align: center;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
